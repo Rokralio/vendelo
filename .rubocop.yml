@@ -1,0 +1,13 @@
+# Omakase Ruby styling for Rails
+# inherit_gem: { rubocop-rails-omakase: rubocop.yml }
+
+inherit_gem: { rubocop-shopify: rubocop.yml }
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: no_comma
+
+Style/SymbolArray:
+  EnforcedStyle: percent
