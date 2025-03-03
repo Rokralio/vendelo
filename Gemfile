@@ -3,13 +3,13 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', '~> 7.2.2', '>= 7.2.2.1'
+gem 'rails', '7.2.2.1'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1'
+gem 'pg', '1.5.9'
 # Use the Puma web server [https://github.com/puma/puma]
-gem 'puma', '>= 5.0'
+gem 'puma', '6.6'
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
@@ -51,6 +51,9 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
+
+  # Solargraph para autocompletado y análisis de código en VS Code
+  gem 'solargraph'
 end
 
 group :test do
