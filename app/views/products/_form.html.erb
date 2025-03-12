@@ -16,7 +16,12 @@
 
   <div>
     <%= form.label :price %>
-    <%= form.text_field :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div>
+    <%= form.label :photo %>
+    <%= form.file_field :photo %>
   </div>
 
     <%= form.submit "Crear Producto" %>
