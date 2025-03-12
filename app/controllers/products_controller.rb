@@ -17,6 +17,16 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  def update
+    @product = Product.find(params[:id])
+
+    if @product.update(product_params)
+      redirect_to(products_path, notice: 'Tu producto ha sido actualizado exitosamente')
+    else
+      render(:edit, status: :unprocessable_entity)
+    end
+  end
+
   def create
     @product = Product.new(product_params)
 
