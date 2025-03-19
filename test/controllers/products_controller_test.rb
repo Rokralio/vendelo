@@ -16,7 +16,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select '.tittle', 'PS4 Fat'
     assert_select '.description', 'PS4 en buen estado'
-    assert_select '.price', '150'
+    assert_select '.price', '150$'
   end
 
   test 'render a new product form' do
