@@ -19,10 +19,12 @@ en:
             price:
               blank: "can't be blank"
               not_a_number: "must be a number"
-            photo:
-              blank: "can't be blank"
   common:
     confirm: "Are you sure?"
+    back: "Go Back"
+  shared:
+    header:
+      add: "Add Product"
   products:
     edit:
       title: "Edit product"
@@ -30,9 +32,29 @@ en:
       title: "New product"
     index:
       title: "Products"
+    show:
+      edit: 'Edit product'
+      delete: 'Delete product'
     create:
       created: "Your product has been successfully created"
     update:
       updated: "Your product has been successfully updated"
     destroy:
       destroyed: "Your product has been successfully deleted"
+  categories:
+    category:
+      edit: 'Edit'
+      delete: 'Delete'
+    index:
+      title: 'Categories'
+      new: 'Add category'
+    edit:
+      title: 'Edit category'
+    create:
+      created: 'Your category has been successfully created'
+    update:
+      updated: 'Your category has been successfully updated'
+    destroy:
+      destroyed: 'Your category has been successfully destroyed'
+    new:
+      title: 'New category'
