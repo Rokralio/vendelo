@@ -48,7 +48,7 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   # gem "rubocop-rails-omakase", require: false
-  gem 'rubocop-shopify', '2.15.1', require: false # Linter de código basado en Shopify.
+  gem 'rubocop-shopify', '2.16.0', require: false # Linter de código basado en Shopify.
 end
 
 group :development do
