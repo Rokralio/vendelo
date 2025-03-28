@@ -1,4 +1,4 @@
-<%= turbo_frame_tag 'categories' do %>
+<%= turbo_frame_tag 'home' do %>
   <h2><%= t('.title') %></h2>
   <%= form_with url: products_path, method: :get do |form| %>
     <%= form.text_field :query_text,
@@ -17,14 +17,27 @@
       value: params[:max_price] %>
 
     <%= form.select :order_by,
-      options_for_select(Product::ORDER_BY.keys.map { |order| [t(".#{order}"), order] }, params[:order_by]), {}, { onchange: 'this.form.requestSubmit()' } %>
+      options_for_select(Product::ORDER_BY.keys.map { |order| [t(".#{order}"), order] },
+      params[:order_by]),
+      {},
+      { onchange: 'this.form.requestSubmit()' } %>
   <% end %>
 
   <%= link_to t('.all'), products_path %>
 
   <%= render partial: 'category', collection: @categories %>
 
-  <div class="products">
+    <%= turbo_frame_tag "products", class: 'products' do %>
     <%= render partial: 'product', collection: @products %>
-  </div>
+
+    <div class="pagination">
+      <% if @pagy.prev %>
+        <%= link_to "Anterior", pagy_url_for(@pagy, @pagy.prev), data: { turbo_frame: "products" }, class: "pagination-button" %>
+      <% end %>
+
+      <% if @pagy.next %>
+        <%= link_to "Siguiente", pagy_url_for(@pagy, @pagy.next), data: { turbo_frame: "products" }, class: "pagination-button" %>
+      <% end %>
+    </div>
+  <% end %>
 <% end %>
