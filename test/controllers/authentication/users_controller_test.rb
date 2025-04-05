@@ -11,7 +11,7 @@ module Authentication
 
     test 'should create user' do
       assert_difference('User.count') do
-        post users_url, params: { user: { email: 'r@gmail.com', username: 'rokraliol', password: 'testme' } }
+        post users_url, params: { user: { email: 'r@gmail.com', username: 'roberto', password: 'testme' } }
       end
 
       assert_redirected_to products_url

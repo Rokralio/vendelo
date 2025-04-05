@@ -29,7 +29,12 @@ en:
       add: "Add Product"
   authentication:
     users:
-      created: 'your account has been created!'
+      create:
+        created: 'your account has been created!'
+    sessions:
+      create:
+        created: 'Welcome!'
+        failed: 'Invalid login!'
   products:
     edit:
       title: "Edit product"

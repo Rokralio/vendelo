@@ -29,7 +29,12 @@ es:
       add: 'Añadir producto'
   authentication:
     users:
-      created: '¡Tu cuenta ha sido creada!'
+      create:
+        created: '¡Tu cuenta ha sido creada!'
+    sessions:
+      create:
+        created: 'Bienvenido!'
+        failed: 'Inicio de sesión inválido!'
   products:
     edit:
       title: 'Editar producto'
