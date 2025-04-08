@@ -14,4 +14,3 @@ eliana:
   email: e@gmail.com
   username: eliana
   password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>
-

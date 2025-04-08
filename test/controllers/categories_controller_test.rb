@@ -4,6 +4,7 @@ require 'test_helper'
 
 class CategoriesControllerTest < ActionDispatch::IntegrationTest
   setup do
+    login
     @category = categories(:clothes)
   end
 

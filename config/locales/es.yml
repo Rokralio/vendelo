@@ -24,6 +24,7 @@ es:
   common:
     confirm: '¿Estás seguro?'
     back: 'Volver'
+    not_logged_in: 'Debes iniciar sesión o crear una cuenta'
   shared:
     header:
       add: 'Añadir producto'

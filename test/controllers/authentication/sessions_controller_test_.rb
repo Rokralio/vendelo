@@ -3,7 +3,7 @@
 require 'test_helper'
 
 module Authentication
-  class SessionsController < ApplicationController
+  class SessionsControllerTest < ActionDispatch::IntegrationTest
     def setup
       @user = users(:roberto)
     end
@@ -13,13 +13,13 @@ module Authentication
     end
 
     test 'should login an user by email' do
-      post sessions_url, params: { login: roberto.email, password: 'testme' }
+      post sessions_url, params: { login: @user.email, password: 'testme' }
 
       assert_redirected_to products_url
     end
 
     test 'should login an user by username' do
-      post sessions_url, params: { username: roberto.username, password: 'testme' }
+      post sessions_url, params: { username: @user.username, password: 'testme' }
 
       assert_redirected_to products_url
     end
