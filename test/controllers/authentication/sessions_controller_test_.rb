@@ -23,5 +23,13 @@ module Authentication
 
       assert_redirected_to products_url
     end
+
+    test 'should logout' do
+      login
+
+      delete session_url(@user.id)
+
+      assert_redirected_to products_url
+      assert_equal flash[:notice], 'Tu sesion ha terminado! Hasta la proxima'
   end
 end

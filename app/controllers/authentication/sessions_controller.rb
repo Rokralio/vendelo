@@ -15,19 +15,11 @@ module Authentication
       else
         redirect_to(new_session_path, alert: t('.failed'))
       end
-      # @user = User.new(user_params)
-
-      # if @user.save
-      #   redirect_to(products_path, notice: t('.created'))
-      # else
-      #   render(:new, status: :unprocessable_entity)
-      # end
     end
 
-    # private
-
-    # def user_params
-    #   params.require(:user).permit(:email, :username, :password)
-    # end
+    def destroy
+      session.delete(:user_id)
+      redirect_to(products_path, notice: t('.destroyed'))
+    end
   end
 end

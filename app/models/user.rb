@@ -15,7 +15,7 @@ class User < ApplicationRecord
     uniqueness: true,
     length: { in: 3..15 },
     format: {
-      with: /\A[a-z-0-9-A-Z]+\z/,
+      with: /\A[a-z0-9A-Z]+\z/,
       message: :invalid,
     }
   validates :password, presence: true, length: { minimum: 6 }
