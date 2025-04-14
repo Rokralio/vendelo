@@ -27,7 +27,7 @@
 
   <%= render partial: 'category', collection: @categories %>
 
-    <%= turbo_frame_tag "products", class: 'products' do %>
+  <%= turbo_frame_tag "products", class: 'products' do %>
     <%= render partial: 'product', collection: @products %>
 
     <div class="pagination">
