@@ -2,8 +2,13 @@
 
 class FavoritesController < ApplicationController
   def create
-    Favorite.create(product: product, user: Current.user)
-    redirect_to(product_path(product), notice: 'Product added to favorites')
+    product.favorites!
+    redirect_to(product_path(product))
+  end
+
+  def destroy
+    product.unfavorited!
+    redirect_to(product_path(product), status: :see_other)
   end
 
   private
