@@ -1,5 +1,5 @@
-<%= link_to product_path(product), class: 'product bg-white mb-2 rounded', data: { turbo_frame: '_top'} do %>
-  <%= image_tag product.photo, class:"w-full h-60 object-cover" if product.photo.attached? %>
+<%= link_to product_path(product), class: 'product bg-white mb-2 rounded lg:w-[calc(25%_-_.5rem)] sm:w-[calc(33.33333%_-_.5rem)]', data: { turbo_frame: '_top'} do %>
+  <%= image_tag product.photo.attached? ? product.photo : 'placeholder.jpg', class:"w-full h-60 object-cover"  %>
   <div class="mt-2">
     <spam class="fond-bold text-xl"><%= product.price %>$</spam>
     <h2 class=""><%= product.title %></h2>
