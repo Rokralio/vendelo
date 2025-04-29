@@ -39,6 +39,10 @@ gem 'pg_search', '2.3.7'
 # Pagination
 gem 'pagy', '5.10.1'
 
+gem 'tailwindcss-rails', '~> 2.0'
+
+gem 'view_component', '~> 2.74'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -67,5 +71,3 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
 end
-
-gem 'tailwindcss-rails', '~> 2.0'
