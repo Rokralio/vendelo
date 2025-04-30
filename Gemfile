@@ -64,6 +64,8 @@ group :development do
 
   # Solargraph para autocompletado y análisis de código en VS Code
   gem 'solargraph'
+
+  gem 'letter_opener'
 end
 
 group :test do
