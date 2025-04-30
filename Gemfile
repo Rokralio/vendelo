@@ -39,7 +39,7 @@ gem 'pg_search', '2.3.7'
 # Pagination
 gem 'pagy', '5.10.1'
 
-gem 'tailwindcss-rails', '~> 2.0'
+gem 'tailwindcss-rails', '~> 4.2'
 
 gem 'view_component', '~> 2.74'
 
