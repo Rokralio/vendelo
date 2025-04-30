@@ -66,10 +66,13 @@ group :development do
   gem 'solargraph'
 
   gem 'letter_opener'
+
+  gem 'awesome_print'
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'webmock'
 end
