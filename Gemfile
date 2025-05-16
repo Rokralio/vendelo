@@ -44,7 +44,7 @@ gem 'tailwindcss-rails', '~> 2.0'
 gem 'view_component', '~> 2.74'
 
 # Background jobs
-gem 'sidekiq', '~> 6.5'
+gem 'sidekiq', '~> 8.0'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
