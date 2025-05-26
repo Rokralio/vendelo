@@ -41,7 +41,7 @@ gem 'pagy', '5.10.1'
 
 gem 'tailwindcss-rails', '~> 2.0'
 
-gem 'view_component', '~> 2.74'
+gem 'view_component', '~> 3.23'
 
 # Background jobs
 gem 'sidekiq', '~> 6.5'
